@@ -99,7 +99,7 @@ gui_show
 #### Result:
 The generic netlist has been created, and area, power, and timing reports have been tabulated and generated using Genus.
 
-The generic netlist has been created, and area, power, and timing reports have been tabulated and generated using Genus.
+
 
 
 
