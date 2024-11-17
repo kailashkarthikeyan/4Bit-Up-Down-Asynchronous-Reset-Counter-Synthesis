@@ -96,6 +96,7 @@ gui_show
 ![Screenshot (159)](https://github.com/user-attachments/assets/9bd5076e-f898-4bde-b7cc-122d65ac6989)
 
 
+
 #### Result:
 The generic netlist has been created, and area, power, and timing reports have been tabulated and generated using Genus.
 
