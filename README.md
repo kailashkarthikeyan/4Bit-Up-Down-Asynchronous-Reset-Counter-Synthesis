@@ -82,6 +82,7 @@ gui_show
 ```
 
 #### Synthesis RTL Schematic :
+![Screenshot (156)](https://github.com/user-attachments/assets/27f3318f-7996-4373-8129-405e471a86a8)
 
 
 #### Area report:
