@@ -64,6 +64,7 @@ used.
 • Genus Script file with .tcl file Extension commands are executed one by one to synthesize the netlist.
 
 # counter.v
+```
 `timescale 1ns / 1 ns
 module counter(clk,m,rst,count);
 input clk,m,rst;
@@ -78,6 +79,7 @@ else
 count=count-1;
 end
 endmodule
+```
 
 # SDC
 ```
