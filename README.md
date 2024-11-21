@@ -63,7 +63,7 @@ used.
 
 • Genus Script file with .tcl file Extension commands are executed one by one to synthesize the netlist.
 
-# counter.v
+### counter.v
 ```
 `timescale 1ns / 1 ns
 module counter(clk,m,rst,count);
@@ -80,7 +80,7 @@ count=count-1;
 end
 endmodule
 ```
-# countertest.v
+### countertest.v
 ```
 `timescale 1ns / 1ns
 module counter_test;
@@ -105,7 +105,7 @@ initial
 
 endmodule
 ```
-# SDC
+### RUN.TCL
 ```
 read_libs  <Library Path>
 read_hdl counter.v
@@ -123,6 +123,15 @@ report_power > counter_power.txt
 write_hdl > counter_netlist.v 				
 write_sdc > counter_output_constraints.sdc		
 gui_show
+```
+### SDC
+```
+create_clock -name clk -period 2 -waveform {0 1} [get_ports "clk"]
+set_clock_transition -rise 0.1 [get_clocks "clk"]
+set_clock_transition -fall 0.1 [get_clocks "clk"]
+set_clock_uncertainty 0.01 [get_ports "clk"]
+set_input_delay -max 0.8 [get_ports "rst"] -clock [get_clocks "clk"]
+set_output_delay -max 0.8 [get_ports "count"] -clock [get_clocks "clk"]
 ```
 
 #### Synthesis RTL Schematic :
